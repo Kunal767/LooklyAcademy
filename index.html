@@ -50,6 +50,16 @@
 </head>
 
 <body>
+    <div id="sale-popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <h1>🔥 Grand Sale Alert! 🔥</h1>
+            <p>Limited Time Offer: Grab our mega assets pack for just <span class="price">₹99</span> instead of <span
+                    class="old-price">₹2999</span>!</p>
+            <p>Don't miss out on this incredible opportunity to save big. Offer valid while stocks last!</p>
+            <a class="shop-now-btn" href="https://rzp.io/l/kUiCQg13dg">Get Now</a>
+        </div>
+    </div>
     <div class="ft-container">
         <div class="sticky-parent " style="height: 50px;">
             <div class="ft-sticky-inner ft-stickytop-box">
@@ -1233,6 +1243,21 @@
     <div id="ft-animate-link">
         <link rel="stylesheet" type="text/css" href="https://assets.flexifunnels.com/css/animate.min.css">
     </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const popup = document.getElementById('sale-popup');
+            popup.style.display = 'flex';
+            const closeButton = document.querySelector('.close-btn');
+            closeButton.addEventListener('click', function () {
+                popup.style.display = 'none';
+            });
+            window.addEventListener('click', function (event) {
+                if (event.target === popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
     <script>
         fbq('track', 'User Entry', {userIp: "DONE"});
 
